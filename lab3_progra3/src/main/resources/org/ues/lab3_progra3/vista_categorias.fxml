@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="1065.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.ues.lab3_progra3.CategoriasController">
+   <center>
+      <TableView fx:id="tbl_categorias" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="tbc_id" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tbc_nombreCategoria" prefWidth="258.40003967285156" text="Nombre Categoria" />
+            <TableColumn fx:id="tbc_eliminar" prefWidth="75.0" text="Accion" />
+            <TableColumn fx:id="tbc_modificar" prefWidth="75.0" text="Accion" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+   <bottom>
+      <Label fx:id="lbl_estado" prefHeight="46.0" prefWidth="33.0" text="0" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+   </bottom>
+   <right>
+      <AnchorPane prefHeight="550.0" prefWidth="322.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="txt_nombreCat" layoutX="142.0" layoutY="29.0" />
+            <Label layoutX="26.0" layoutY="33.0" text="Nombre categoria" />
+            <Button fx:id="btn_procesar" layoutX="26.0" layoutY="77.0" mnemonicParsing="false" text="Procesar" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>
